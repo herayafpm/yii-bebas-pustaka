@@ -3,11 +3,11 @@
 namespace app\models;
 
 /**
- * This is the ActiveQuery class for [[BebasPustaka]].
+ * This is the ActiveQuery class for [[Ttd]].
  *
- * @see BebasPustaka
+ * @see Ttd
  */
-class BebasPustakaQuery extends \yii\db\ActiveQuery
+class TtdQuery extends \yii\db\ActiveQuery
 {
     /*public function active()
     {
@@ -16,7 +16,7 @@ class BebasPustakaQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return BebasPustaka[]|array
+     * @return Ttd[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +25,7 @@ class BebasPustakaQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return BebasPustaka|array|null
+     * @return Ttd|array|null
      */
     public function one($db = null)
     {

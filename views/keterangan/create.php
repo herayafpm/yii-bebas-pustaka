@@ -3,13 +3,13 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Pustaka */
+/* @var $model app\models\Keterangan */
 
-$this->title = Yii::t('app', 'Create Pustaka');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Pustakas'), 'url' => ['index']];
+$this->title = Yii::t('app', 'Create Keterangan');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Keterangans'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="pustaka-create">
+<div class="keterangan-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

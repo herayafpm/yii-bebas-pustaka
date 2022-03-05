@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'NIM',
                 'format' => 'raw',
                 'value' => function($data){
-                    return Html::a($data->nim,Url::toRoute(['bebas_pustaka','nim' => $data->nim]));
+                    return Html::a($data->nim,Url::toRoute(['bebaspustaka/index','nim' => $data->nim]));
                 }
             ],
             'nama',

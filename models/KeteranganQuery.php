@@ -3,11 +3,11 @@
 namespace app\models;
 
 /**
- * This is the ActiveQuery class for [[Pustaka]].
+ * This is the ActiveQuery class for [[Keterangan]].
  *
- * @see Pustaka
+ * @see Keterangan
  */
-class PustakaQuery extends \yii\db\ActiveQuery
+class KeteranganQuery extends \yii\db\ActiveQuery
 {
     /*public function active()
     {
@@ -16,7 +16,7 @@ class PustakaQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return Pustaka[]|array
+     * @return Keterangan[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +25,7 @@ class PustakaQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return Pustaka|array|null
+     * @return Keterangan|array|null
      */
     public function one($db = null)
     {
