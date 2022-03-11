@@ -14,7 +14,7 @@ class m220305_030332_create_table_ttd extends Migration
     {
         $this->createTable('{{%ttd}}',[
             'id' => $this->primaryKey(),
-            'nim' => $this->string(255)->notNull()->unique(),
+            'nim' => $this->string(255),
             'id_keterangan' => $this->integer()
         ]);
         // creates index for column `author_id`
@@ -31,6 +31,22 @@ class m220305_030332_create_table_ttd extends Migration
             'id_keterangan',
             'keterangan',
             'id',
+            'CASCADE'
+        );
+        // creates index for column `author_id`
+        $this->createIndex(
+            'idx-mhs-nim',
+            'ttd',
+            'nim'
+        );
+
+        // add foreign key for table `user`
+        $this->addForeignKey(
+            'fk-mhs-nim',
+            'ttd',
+            'nim',
+            'mhs',
+            'nim',
             'CASCADE'
         );
     }

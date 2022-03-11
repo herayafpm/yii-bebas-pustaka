@@ -14,7 +14,7 @@ class m220305_065525_create_table_cap extends Migration
     {
         $this->createTable('{{%cap}}',[
             'id' => $this->primaryKey(),
-            'nim' => $this->string(255)->notNull()->unique(),
+            'nim' => $this->string(255),
             'id_keterangan' => $this->integer()
         ]);
         // creates index for column `author_id`
@@ -31,6 +31,23 @@ class m220305_065525_create_table_cap extends Migration
             'id_keterangan',
             'keterangan',
             'id',
+            'CASCADE'
+        );
+
+        // creates index for column `author_id`
+        $this->createIndex(
+            'idx2-mhs-nim',
+            'cap',
+            'nim'
+        );
+
+        // add foreign key for table `user`
+        $this->addForeignKey(
+            'fk2-mhs-nim',
+            'cap',
+            'nim',
+            'mhs',
+            'nim',
             'CASCADE'
         );
     }
