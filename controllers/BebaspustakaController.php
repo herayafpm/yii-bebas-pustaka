@@ -35,8 +35,9 @@ class BebaspustakaController extends \yii\web\Controller
                     }
                     $no_ket++;
                 }
+                \Yii::$app->session->setFlash('success','Berhasil menyimpan');
             }
-            return $this->redirect(['bebaspustaka/index','nim' => $nim]);
+            return $this->refresh();
         } else {
             return $this->render('index',['mhs' => $mhs,'keterangans' => $keterangans]);
         }

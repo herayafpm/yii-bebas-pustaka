@@ -3,12 +3,10 @@
 
 use yii\bootstrap4\ActiveForm;
 use yii\helpers\Html;
-
 ?>
 <p>Nama mahasiswa: <?= $mhs->nama ?></p>
 <p>NIM: <?= $mhs->nim ?></p>
 <p>Jurusan: <?= $mhs->jurusan ?></p>
-
 <div class="table-responsive">
     <?php $form = ActiveForm::begin(); ?>
     <table class="table table-bordered">

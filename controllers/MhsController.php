@@ -40,16 +40,12 @@ class MhsController extends Controller
     {
         $dataProvider = new ActiveDataProvider([
             'query' => Mhs::find(),
-            /*
-            'pagination' => [
-                'pageSize' => 50
-            ],
+            // 'pagination' => [
+            //     'pageSize' => 50
+            // ],
             'sort' => [
-                'defaultOrder' => [
-                    'id' => SORT_DESC,
-                ]
+                'attributes' => ['id','nim','nama','jurusan']
             ],
-            */
         ]);
 
         return $this->render('index', [

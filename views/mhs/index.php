@@ -29,8 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             [
-                'enableSorting' => true,
-                'attribute' => 'NIM',
+                'attribute' => 'nim',
+                'label' => 'NIM',
                 'format' => 'raw',
                 'value' => function($data){
                     return Html::a($data->nim,Url::toRoute(['bebaspustaka/index','nim' => $data->nim]));
