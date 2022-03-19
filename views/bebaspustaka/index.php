@@ -3,6 +3,8 @@
 
 use yii\bootstrap4\ActiveForm;
 use yii\helpers\Html;
+use yii\helpers\Url;
+
 ?>
 <p>Nama mahasiswa: <?= $mhs->nama ?></p>
 <p>NIM: <?= $mhs->nim ?></p>
@@ -34,6 +36,7 @@ use yii\helpers\Html;
     </table>
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'Print'),Url::toRoute(['print','nim' => $mhs->nim]), ['class' => 'btn btn-primary','target' => '_blank']) ?>
     </div>
     <?php ActiveForm::end(); ?>
 </div>

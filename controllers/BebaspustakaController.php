@@ -6,7 +6,7 @@ use app\models\Cap;
 use app\models\Keterangan;
 use app\models\Mhs;
 use app\models\Ttd;
-
+use Spipu\Html2Pdf\Html2Pdf;
 class BebaspustakaController extends \yii\web\Controller
 {
     public function actionIndex($nim = null)
@@ -43,5 +43,12 @@ class BebaspustakaController extends \yii\web\Controller
         }
         
     }
-
+    public function actionPrint($nim = null)
+    {
+        $mhs = Mhs::find()->where(['nim' => $nim])->one();
+        $keterangans = Keterangan::find()->all();
+        $html2pdf = new Html2Pdf('P', 'A4', 'fr', true, 'UTF-8', array(15, 5, 15, 5));
+        $html2pdf->writeHTML($this->renderPartial('print',['mhs' => $mhs,'keterangans' => $keterangans]));
+        $html2pdf->output();
+    }
 }
