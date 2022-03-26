@@ -92,23 +92,39 @@ use yii\helpers\Url;
                 $no_ket++;
             endforeach ?>
         </table>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <table style="width: 100%;">
-                <tr>
-                    <td width="420"></td>
-                    <td>
-                        Purwokerto, <?=date("d-m-Y")?> <br/>
-                        Ketua Pusat Informasi Ilmiah <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        dr. Susiana Candrawati, Sp.K.O.<br/>
-                        NIP. 1979082220055012002
-                    </td>
-                </tr>
+            <?php
+            $bulan = [
+                '1' => 'Januari',
+                'Februari',
+                'Maret',
+                'April',
+                'Mei',
+                'Juni',
+                'Juli',
+                'Agustus',
+                'September',
+                'Oktober',
+                'November',
+                'Desember',
+            ]
+            ?>
+            <tr>
+                <td width="420"></td>
+                <td>
+                    Purwokerto, <?= date("j") ?> <?= $bulan[(int)date("m")] ?> <?= date("Y") ?> <br />
+                    Ketua Pusat Informasi Ilmiah <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    dr. Susiana Candrawati, Sp.K.O.<br />
+                    NIP. 1979082220055012002
+                </td>
+            </tr>
         </table>
     </div>
 </page>
